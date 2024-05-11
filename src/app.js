@@ -5,8 +5,6 @@ import "./style.css";
 window.onload = () => {
   console.log("hello");
   //write your code here
-  // document.querySelector(".card").classList.add(generateRandomSuit());
-  // document.querySelector(".card").innerHTML = generateRandomNumber();
 
   let generateRandomSuit = () => {
     let suit = ["♦", "♥", "♠", "♣"];
