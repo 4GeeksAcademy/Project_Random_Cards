@@ -3,20 +3,18 @@ import "bootstrap";
 import "./style.css";
 
 window.onload = () => {
-  console.log("hello");
   //write your code here
 
   let generateRandomSuit = () => {
     let suit = ["♦", "♥", "♠", "♣"];
     let indexSuit = Math.floor(Math.random() * suit.length);
-    console.log(suit[indexSuit]);
     return suit[indexSuit];
   };
-  generateRandomSuit();
 
   let randomSuit = generateRandomSuit();
   document.querySelector(".top").textContent = randomSuit;
   document.querySelector(".bottom").textContent = randomSuit;
+
   let generateRandomNumber = () => {
     let number = [
       "A",
