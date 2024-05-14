@@ -6,9 +6,15 @@ window.onload = () => {
   //write your code here
 
   let generateRandomSuit = () => {
-    let suit = ["♦", "♥", "♠", "♣"];
-    let indexSuit = Math.floor(Math.random() * suit.length);
-    return suit[indexSuit];
+    let suits = ["♦", "♥", "♠", "♣"];
+    let randomIndexSuit = Math.floor(Math.random() * suits.length);
+    let topSuitElement = document.querySelector(".top");
+    let bottomSuitElement = document.querySelector(".bottom");
+    if (suits[randomIndexSuit] === "♠" || suits[randomIndexSuit] === "♣") {
+      topSuitElement.style.color = "black";
+      bottomSuitElement.style.color = "black";
+    }
+    return suits[randomIndexSuit];
   };
 
   let randomSuit = generateRandomSuit();
@@ -16,7 +22,7 @@ window.onload = () => {
   document.querySelector(".bottom").textContent = randomSuit;
 
   let generateRandomNumber = () => {
-    let number = [
+    let numbers = [
       "A",
       "2",
       "3",
@@ -31,8 +37,8 @@ window.onload = () => {
       "Q",
       "K"
     ];
-    let indexNumber = Math.floor(Math.random() * number.length);
-    return number[indexNumber];
+    let randomIndexNumber = Math.floor(Math.random() * numbers.length);
+    return numbers[randomIndexNumber];
   };
 
   let randomNumber = generateRandomNumber();
